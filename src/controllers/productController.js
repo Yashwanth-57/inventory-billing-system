@@ -11,7 +11,7 @@ const addProduct = async (req, res) => {
       price,
       stock,
       category,
-      businessId: req.user.id   // 👈 store user id
+      businessId: req.user.id   
     });
 
     await newProduct.save();
