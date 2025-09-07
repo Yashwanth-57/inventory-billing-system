@@ -26,7 +26,13 @@ const getProducts = async (req, res) => {
   try {
     const products = await Product.find({ businessId: req.user.id });
 
-    console.log("Products found:", products, );
+    //console.log("Products found:", products, );
+    
+     if (!products || products.length === 0) {
+      return res.status(200).json({ message: "No products found" });
+    }
+
+
     res.json(products);
   } catch (err) {
     res.status(500).json({ message: "Error fetching products", error: err.message });

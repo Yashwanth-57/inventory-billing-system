@@ -15,6 +15,10 @@ const addVendor = async (req, res) => {
 const getVendors = async (req, res) => {
   try {
     const vendors = await Vendor.find({ businessId: req.user.id });
+    if (!vendors || vendors.length === 0) {
+  return res.status(200).json({ message: "No vendors found" });
+}
+
     res.json(vendors);
   } catch (err) {
     res.status(500).json({ message: "Error fetching vendors", error: err.message });

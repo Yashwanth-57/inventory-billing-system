@@ -15,6 +15,10 @@ const addCustomer = async (req, res) => {
 const getCustomers = async (req, res) => {
   try {
     const customers = await Customer.find({ businessId: req.user.id });
+    if (!customers || customers.length === 0) {
+  return res.status(200).json({ message: "No customers found" });
+}
+
     res.json(customers);
   } catch (err) {
     res.status(500).json({ message: "Error fetching customers", error: err.message });

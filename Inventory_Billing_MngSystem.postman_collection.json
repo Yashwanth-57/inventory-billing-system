@@ -49,9 +49,7 @@
             },
             "url": {
               "raw": "inventory-billing-system-production.up.railway.app/api/auth/login",
-              "protocol": "http",
-              "host": ["localhost"],
-              "port": "5000",
+              "host": ["https://inventory-billing-system-production.up.railway.app"],
               "path": ["api","auth","login"]
             }
           },
@@ -69,9 +67,7 @@
             ],
             "url": {
               "raw": "inventory-billing-system-production.up.railway.app/api/auth/logout",
-              "protocol": "http",
-              "host": ["localhost"],
-              "port": "5000",
+              "host": ["https://inventory-billing-system-production.up.railway.app"],
               "path": ["api","auth","logout"]
             }
           },
@@ -93,10 +89,8 @@
               }
             ],
             "url": {
-              "raw": "http://localhost:5000/products",
-              "protocol": "http",
-              "host": ["localhost"],
-              "port": "5000",
+              "raw": "https://inventory-billing-system-production.up.railway.app/products",
+            "host": ["https://inventory-billing-system-production.up.railway.app"],
               "path": ["products"]
             }
           },
@@ -121,10 +115,8 @@
               "raw": "{\n    \"name\": \"Laptop\",\n    \"description\": \"Gaming Laptop\",\n    \"price\": 1200,\n    \"stock\": 10,\n    \"category\": \"Electronics\"\n}"
             },
             "url": {
-              "raw": "http://localhost:5000/products",
-              "protocol": "http",
-              "host": ["localhost"],
-              "port": "5000",
+              "raw": "https://inventory-billing-system-production.up.railway.app/products",
+              "host": ["https://inventory-billing-system-production.up.railway.app"],
               "path": ["products"]
             }
           },
@@ -149,10 +141,8 @@
               "raw": "{\n    \"price\": 1100,\n    \"stock\": 15\n}"
             },
             "url": {
-              "raw": "http://localhost:5000/products/{{productId}}",
-              "protocol": "http",
-              "host": ["localhost"],
-              "port": "5000",
+              "raw": "https://inventory-billing-system-production.up.railway.app/products/{{productId}}",
+             "host": ["https://inventory-billing-system-production.up.railway.app"],
               "path": ["products", "{{productId}}"]
             }
           },
@@ -169,10 +159,8 @@
               }
             ],
             "url": {
-              "raw": "http://localhost:5000/products/{{productId}}",
-              "protocol": "http",
-              "host": ["localhost"],
-              "port": "5000",
+              "raw": "https://inventory-billing-system-production.up.railway.app/products/{{productId}}",
+             "host": ["https://inventory-billing-system-production.up.railway.app"],
               "path": ["products", "{{productId}}"]
             }
           },
@@ -194,10 +182,8 @@
               }
             ],
             "url": {
-              "raw": "http://localhost:5000/customers",
-              "protocol": "http",
-              "host": ["localhost"],
-              "port": "5000",
+              "raw": "https://inventory-billing-system-production.up.railway.app/customers",
+           "host": ["https://inventory-billing-system-production.up.railway.app"],
               "path": ["customers"]
             }
           },
@@ -222,10 +208,8 @@
               "raw": "{\n    \"name\": \"Alice\",\n    \"email\": \"alice@example.com\",\n    \"phone\": \"9876543210\",\n    \"type\": \"customer\"  \n}"
             },
             "url": {
-              "raw": "http://localhost:5000/customers",
-              "protocol": "http",
-              "host": ["localhost"],
-              "port": "5000",
+              "raw": "https://inventory-billing-system-production.up.railway.app/customers",
+            "host": ["https://inventory-billing-system-production.up.railway.app"],
               "path": ["customers"]
             }
           },
@@ -250,10 +234,8 @@
               "raw": "{\n    \"phone\": \"9123456780\"\n}"
             },
             "url": {
-              "raw": "http://localhost:5000/customers/{{customerId}}",
-              "protocol": "http",
-              "host": ["localhost"],
-              "port": "5000",
+              "raw": "https://inventory-billing-system-production.up.railway.app/customers/{{customerId}}",
+            "host": ["https://inventory-billing-system-production.up.railway.app"],
               "path": ["customers", "{{customerId}}"]
             }
           },
@@ -270,10 +252,8 @@
               }
             ],
             "url": {
-              "raw": "http://localhost:5000/customers/{{customerId}}",
-              "protocol": "http",
-              "host": ["localhost"],
-              "port": "5000",
+              "raw": "https://inventory-billing-system-production.up.railway.app/customers/{{customerId}}",
+               "host": ["https://inventory-billing-system-production.up.railway.app"],
               "path": ["customers", "{{customertId}}"]
             }
           },
@@ -290,10 +270,8 @@
               }
             ],
             "url": {
-              "raw": "http://localhost:5000/vendors",
-              "protocol": "http",
-              "host": ["localhost"],
-              "port": "5000",
+              "raw": "https://inventory-billing-system-production.up.railway.app/vendors",
+               "host": ["https://inventory-billing-system-production.up.railway.app"],
               "path": ["vendors"]
             }
           },
@@ -318,10 +296,8 @@
               "raw": "{\n    \"name\": \"Bob\",\n    \"email\": \"bob@example.com\",\n    \"phone\": \"9876543330\",\n    \"type\": \"vendor\"  \n}"
             },
             "url": {
-              "raw": "http://localhost:5000/vendors",
-              "protocol": "http",
-              "host": ["localhost"],
-              "port": "5000",
+              "raw": "https://inventory-billing-system-production.up.railway.app/vendors",
+             "host": ["https://inventory-billing-system-production.up.railway.app"],
               "path": ["vendors"]
             }
           },
@@ -346,10 +322,8 @@
               "raw": "{\n    \"phone\": \"9999456780\"\n}"
             },
             "url": {
-              "raw": "http://localhost:5000/vendors/{{vendorId}}",
-              "protocol": "http",
-              "host": ["localhost"],
-              "port": "5000",
+              "raw": "https://inventory-billing-system-production.up.railway.app/vendors/{{vendorId}}",
+             "host": ["https://inventory-billing-system-production.up.railway.app"],
               "path": ["vendors", "{{vendorId}}"]
             }
           },
@@ -366,10 +340,8 @@
               }
             ],
             "url": {
-              "raw": "http://localhost:5000/vendors/{{vendorId}}",
-              "protocol": "http",
-              "host": ["localhost"],
-              "port": "5000",
+              "raw": "https://inventory-billing-system-production.up.railway.app/vendors/{{vendorId}}",
+             "host": ["https://inventory-billing-system-production.up.railway.app"],
               "path": ["vendors", "{{vendorId}}"]
             }
           },
@@ -391,10 +363,8 @@
               }
             ],
             "url": {
-              "raw": "http://localhost:5000/transactions?type=sale",
-              "protocol": "http",
-              "host": ["localhost"],
-              "port": "5000",
+              "raw": "https://inventory-billing-system-production.up.railway.app/transactions?type=sale",
+            "host": ["https://inventory-billing-system-production.up.railway.app"],
               "path": ["transactions"],
               "query": [
                 { "key": "type", "value": "sale" }
@@ -422,10 +392,8 @@
               "raw": "{\n    \"type\": \"sale\",\n    \"customerId\": \"{{contactId}}\",\n    \"products\": [\n        { \"productId\": \"{{productId}}\", \"quantity\": 1, \"price\": 1200 }\n    ]\n}"
             },
             "url": {
-              "raw": "http://localhost:5000/transactions",
-              "protocol": "http",
-              "host": ["localhost"],
-              "port": "5000",
+              "raw": "https://inventory-billing-system-production.up.railway.app/transactions",
+         "host": ["https://inventory-billing-system-production.up.railway.app"],
               "path": ["transactions"]
             }
           },
@@ -447,10 +415,8 @@
               }
             ],
             "url": {
-              "raw": "http://localhost:5000/reports/inventory",
-              "protocol": "http",
-              "host": ["localhost"],
-              "port": "5000",
+              "raw": "https://inventory-billing-system-production.up.railway.app/reports/inventory",
+             "host": ["https://inventory-billing-system-production.up.railway.app"],
               "path": ["reports", "inventory"]
             }
           },
@@ -467,10 +433,8 @@
               }
             ],
             "url": {
-              "raw": "http://localhost:5000/reports/transactions?startDate=2025-09-01&endDate=2025-09-05",
-              "protocol": "http",
-              "host": ["localhost"],
-              "port": "5000",
+              "raw": "https://inventory-billing-system-production.up.railway.app/reports/transactions?startDate=2025-09-01&endDate=2025-09-05",
+               "host": ["https://inventory-billing-system-production.up.railway.app"],
               "path": ["reports", "transactions"],
               "query": [
                 { "key": "startDate", "value": "2025-09-01" },

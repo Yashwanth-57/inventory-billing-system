@@ -29,6 +29,9 @@ const getTransactionReport = async (req, res) => {
 
     const revenue = totalSales - totalPurchases;
 
+  
+
+
     res.json({ totalSales, totalPurchases, revenue, transactionsCount: transactions.length });
   } catch (err) {
     console.error("Error generating report:", err);

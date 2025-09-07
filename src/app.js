@@ -48,7 +48,11 @@ mongoose
     useUnifiedTopology: true,
   })
   .then(() => {
+
     console.log("MongoDB Connected");
+    console.log(" MongoDB Connected");
+
+
     console.log(" MongoDB Connected");
 
     // Start server only after DB is connected
@@ -56,6 +60,7 @@ mongoose
     app.listen(PORT, () => console.log(` Server running on port ${PORT}`));
   })
   .catch((err) => {
+
     console.error(" MongoDB connection failed:", err.message);
     console.error("MongoDB connection failed:", err.message);
   });

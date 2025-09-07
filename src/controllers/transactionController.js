@@ -75,6 +75,9 @@ const getTransactions = async (req, res) => {
     }
 
     const transactions = await Transaction.find(filter).populate("products.productId customerId vendorId");
+    if (!transactions || transactions.length === 0) {
+  return res.status(200).json({ message: "No transactions found" });
+}
     res.json(transactions);
   } catch (err) {
     console.error("Error fetching transactions:", err);
