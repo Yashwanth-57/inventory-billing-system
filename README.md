@@ -1,7 +1,11 @@
 # Inventory & Billing Management System API
 
 ## Base URL
-http://localhost:5000
+
+Project is hosted in Railway
+
+https://inventory-billing-system-production.up.railway.app
+
 
 ---
 
@@ -226,3 +230,11 @@ A Postman collection is included for easy testing of all APIs.
 - File: `Inventory_Billing_MngSystem.postman_collection.json`
 - Import this file into Postman
 - It contains all endpoints with example requests and headers
+
+
+
+//##G GIT HUB
+
+project added in my git hub
+
+git hub : https://github.com/Yashwanth-57/inventory-billing-system

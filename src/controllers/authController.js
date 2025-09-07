@@ -38,7 +38,7 @@ const errorResponse = require("../utils/errorResponse");
 
     await newUser.save();
 
-    res.status(201).json({ message: "User registered successfully ✅", businessId });
+    res.status(201).json({ message: "User registered successfully ", businessId });
   } catch (err) {
     console.error(err);
     return errorResponse(res, 404, "Server error");
@@ -70,7 +70,7 @@ const login = async (req, res) => {
    const token = generateToken(user._id);
 
 
-    res.json({ message: "Login successful ✅", token });
+    res.json({ message: "Login successful ", token });
   } catch (err) {
     console.error(err);
    // res.status(500).json({ message: "Server error" });

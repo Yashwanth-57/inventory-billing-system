@@ -24,10 +24,10 @@
               "raw": "{\n    \"username\": \"John Doe\",\n    \"email\": \"john@example.com\",\n    \"password\": \"123456\",\n    \"businessName\": \"John's Store\"\n}"
             },
             "url": {
-              "raw": "http://localhost:5000/register",
-              "protocol": "http",
-              "host": ["localhost"],
-              "port": "5000",
+              "raw": "inventory-billing-system-production.up.railway.app/api/auth/register",
+           
+              "host": ["https://inventory-billing-system-production.up.railway.app"],
+        
               "path": ["api","auth","register"]
             }
           },
@@ -48,7 +48,7 @@
               "raw": "{\n    \"email\": \"john@example.com\",\n    \"password\": \"123456\"\n}"
             },
             "url": {
-              "raw": "http://localhost:5000/login",
+              "raw": "inventory-billing-system-production.up.railway.app/api/auth/login",
               "protocol": "http",
               "host": ["localhost"],
               "port": "5000",
@@ -68,7 +68,7 @@
               }
             ],
             "url": {
-              "raw": "http://localhost:5000/api/authlogout",
+              "raw": "inventory-billing-system-production.up.railway.app/api/auth/logout",
               "protocol": "http",
               "host": ["localhost"],
               "port": "5000",
