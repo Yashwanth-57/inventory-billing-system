@@ -38,7 +38,7 @@ app.use("/reports", reportRoutes);
 
 // Simple test route
 app.get("/", (req, res) => {
-  res.send("Inventory & Billing Management System API is running ✅");
+  res.send("Inventory & Billing Management System API is running ");
 });
 
 // Connect to MongoDB Atlas
@@ -48,12 +48,12 @@ mongoose
     useUnifiedTopology: true,
   })
   .then(() => {
-    console.log("✅ MongoDB Connected");
+    console.log("MongoDB Connected");
     // Start server only after DB is connected
     const PORT = process.env.PORT || 5000;
-    app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+    app.listen(PORT, () => console.log(` Server running on port ${PORT}`));
   })
   .catch((err) => {
-    console.error("❌ MongoDB connection failed:", err.message);
+    console.error(" MongoDB connection failed:", err.message);
   });
 
