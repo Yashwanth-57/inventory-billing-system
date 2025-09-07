@@ -1,0 +1,493 @@
+{
+  "info": {
+    "name": "Inventory Billing Management System",
+    "_postman_id": "abcd1234-5678-efgh-ijkl-901234567890",
+    "description": "Full API collection for testing Inventory Billing Management System",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Register",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"username\": \"John Doe\",\n    \"email\": \"john@example.com\",\n    \"password\": \"123456\",\n    \"businessName\": \"John's Store\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5000/register",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["api","auth","register"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\": \"john@example.com\",\n    \"password\": \"123456\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5000/login",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["api","auth","login"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Logout",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:5000/api/authlogout",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["api","auth","logout"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Products",
+      "item": [
+        {
+          "name": "Get All Products",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:5000/products",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["products"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Add Product",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Laptop\",\n    \"description\": \"Gaming Laptop\",\n    \"price\": 1200,\n    \"stock\": 10,\n    \"category\": \"Electronics\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5000/products",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["products"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Product",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"price\": 1100,\n    \"stock\": 15\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5000/products/{{productId}}",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["products", "{{productId}}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Product",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:5000/products/{{productId}}",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["products", "{{productId}}"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Contacts",
+      "item": [
+        {
+          "name": "Get All Customers",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:5000/customers",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["customers"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Add Customer",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Alice\",\n    \"email\": \"alice@example.com\",\n    \"phone\": \"9876543210\",\n    \"type\": \"customer\"  \n}"
+            },
+            "url": {
+              "raw": "http://localhost:5000/customers",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["customers"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Customer",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"phone\": \"9123456780\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5000/customers/{{customerId}}",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["customers", "{{customerId}}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Customer",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:5000/customers/{{customerId}}",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["customers", "{{customertId}}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Vendors",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:5000/vendors",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["vendors"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Add Vendor",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Bob\",\n    \"email\": \"bob@example.com\",\n    \"phone\": \"9876543330\",\n    \"type\": \"vendor\"  \n}"
+            },
+            "url": {
+              "raw": "http://localhost:5000/vendors",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["vendors"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Vendor",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"phone\": \"9999456780\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5000/vendors/{{vendorId}}",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["vendors", "{{vendorId}}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Vendor",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:5000/vendors/{{vendorId}}",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["vendors", "{{vendorId}}"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Transactions",
+      "item": [
+        {
+          "name": "Get Transactions",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:5000/transactions?type=sale",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["transactions"],
+              "query": [
+                { "key": "type", "value": "sale" }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Add Transaction",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"type\": \"sale\",\n    \"customerId\": \"{{contactId}}\",\n    \"products\": [\n        { \"productId\": \"{{productId}}\", \"quantity\": 1, \"price\": 1200 }\n    ]\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5000/transactions",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["transactions"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Reports",
+      "item": [
+        {
+          "name": "Inventory Report",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:5000/reports/inventory",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["reports", "inventory"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Transaction Report",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:5000/reports/transactions?startDate=2025-09-01&endDate=2025-09-05",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["reports", "transactions"],
+              "query": [
+                { "key": "startDate", "value": "2025-09-01" },
+                { "key": "endDate", "value": "2025-09-05" }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "variable": [
+    { "key": "token", "value": "" },
+    { "key": "productId", "value": "" },
+    { "key": "contactId", "value": "" }
+  ]
+}
+
+
